@@ -1,6 +1,6 @@
 # minecraft-stronghold-finder
 
-This algorthm allows Minecraft players to determine the X and Z coordinates of a stronghold using only 2 eyes of Ender. Once launched, an eye of Ender moves a few blocks in the direction of the nearest stronghold. By using 2 Ender eyes and mathematically extending their respective trajectories, we can then determine their intersection, which corresponds to the location of the stronghold.
+This algorithm allows Minecraft players to determine the X and Z coordinates of a stronghold using only 2 eyes of Ender. Once launched, an eye of Ender moves a few blocks in the direction of the nearest stronghold. By using 2 Ender eyes and mathematically extending their respective trajectories, we can then determine their intersection, which corresponds to the location of the stronghold.
 
 The lateral angles and coordinates can be read on the left side of the **debug screen**, by pressing **F3**. The coordinates, which can be rounded to the nearest whole number, are displayed on the `XYZ` line. The lateral angle, which can be rounded to one decimal place, is the first number in brackets on the `Facing` line.
 
