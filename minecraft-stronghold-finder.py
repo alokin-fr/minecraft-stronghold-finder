@@ -14,12 +14,11 @@ a1=3.141592653589793*(0.5+a1/180)   #Convert angles so that they suit the cartes
 a2=3.141592653589793*(0.5+a2/180)
 
 def compute():
-    try:
-        x=(cos(a2)*(cos(a1)*z1-sin(a1)*x1)-cos(a1)*(cos(a2)*z2-sin(a2)*x2))/sin(a2-a1)  #X coordinate of the stronghold (theorical).
-        z=(sin(a2)*(sin(a1)*x1-cos(a1)*z1)-sin(a1)*(sin(a2)*x2-cos(a2)*z2))/sin(a1-a2)  #Z coordinate of the stronghold (theorical).
-    except ZeroDivisionError:
-        return print("ERROR: The two angles are equal.")    #Check if the angles are different.
-
+    if a1==a2:  #Check if the angles are different.
+        return print("ERROR: The two angles are equal.")    
+    
+    x=(cos(a2)*(cos(a1)*z1-sin(a1)*x1)-cos(a1)*(cos(a2)*z2-sin(a2)*x2))/sin(a2-a1)  #X coordinate of the stronghold (theorical).
+    z=(sin(a2)*(sin(a1)*x1-cos(a1)*z1)-sin(a1)*(sin(a2)*x2-cos(a2)*z2))/sin(a1-a2)  #Z coordinate of the stronghold (theorical).
     sol=[x,z]
     coor=[x1,z1,x2,z2]
     trig=[cos(a1),sin(a1),cos(a2),sin(a2)]
